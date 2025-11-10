@@ -59,7 +59,7 @@ function TimetableView({ data }) {
         <div key={i} className="bg-white border rounded-xl p-4 shadow-sm">
           <div className="font-semibold text-slate-800 mb-3">{d}</div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {Object.entries(data?.[i]?.||{}).map(([time, slot], idx) => (
+            {Object.entries(data?.[i] || {}).map(([time, slot], idx) => (
               <div key={idx} className="rounded-lg border p-3 bg-slate-50">
                 <div className="text-xs text-slate-500">{time}</div>
                 <div className="font-medium">{slot.title}</div>
